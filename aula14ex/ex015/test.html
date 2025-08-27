@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a id="changeTheme" href="">Change theme</a>
+        </li>
+        <li>
+            <a id="openMenu" href="">Open menu</a>
+        </li>
+    </ul>
+    <ul class="submenu">
+        <li>
+            <a href="item1">Item1</a>
+        </li>
+        <li>
+            <a href="item1">Item1</a>
+        </li>
+        <li>
+            <a href="item1">Item1</a>
+        </li>
+    </ul>
+    <script src="test.js"></script>
+    <style>
+        .submenu{
+            display: none;
+        }
+        .submenu.open{
+            display: block;
+            transform: translateX(0);
+            animation: fadeIn 1s ease forwards;
+        }
+        body.blue{
+            background-color: blue;
+            font-size: 60px;
+            
+        }
+        a{
+            color: white;
+        }
+        @keyframes fadeIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+</html>
